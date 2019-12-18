@@ -30,6 +30,10 @@ eval $cmd
 echo "docker push ${SHA_NAME}"
 docker push ${SHA_NAME}
 
+LATEST_NAME="${INPUT_IMAGE_NAME}:latest"
+echo "docker push ${SHA_NAME}"
+docker push ${SHA_NAME}
+
 # Emit output variables
 echo "::set-output name=IMAGE_SHA_NAME::${SHA_NAME}"
 echo "::set-output name=IMAGE_URI::https://hub.docker.com/r/${INPUT_IMAGE_NAME}"
