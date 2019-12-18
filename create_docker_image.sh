@@ -31,6 +31,7 @@ echo "docker push ${SHA_NAME}"
 docker push ${SHA_NAME}
 
 LATEST_NAME="${INPUT_IMAGE_NAME}:latest"
+docker tag ${SHA_NAME} ${LATEST_NAME}
 echo "docker push ${LATEST_NAME}"
 docker push ${LATEST_NAME}
 
