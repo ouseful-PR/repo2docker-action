@@ -31,8 +31,8 @@ echo "docker push ${SHA_NAME}"
 docker push ${SHA_NAME}
 
 LATEST_NAME="${INPUT_IMAGE_NAME}:latest"
-echo "docker push ${SHA_NAME}"
-docker push ${SHA_NAME}
+echo "docker push ${LATEST_NAME}"
+docker push ${LATEST_NAME}
 
 # Emit output variables
 echo "::set-output name=IMAGE_SHA_NAME::${SHA_NAME}"
